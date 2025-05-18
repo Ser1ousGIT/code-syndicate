@@ -85,7 +85,20 @@ const fields = [
     prompt: 'Enter semester: --sem="3"',
     pattern: /^--sem="([1-8])"$/,
     error: "Semester should be 1–8"
+  },
+  {
+  key: "email",
+  prompt: 'Enter your email: --email="your@email.com"',
+  pattern: /^--email="[^"]+@[^"]+\.[^"]+"$/,
+  error: "Please enter a valid email address using --email=\"example@domain.com\""
+  },
+  {
+  key: "phone",
+  prompt: 'Enter your phone number: --phone="9876543210"',
+  pattern: /^--phone="\\d{10}"$/,
+  error: "Please enter a valid 10-digit phone number using --phone=\"9876543210\""
   }
+
 ];
 
 let currentFieldIndex = 0;
