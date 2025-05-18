@@ -97,6 +97,12 @@ const fields = [
   prompt: 'Enter your phone number: --phone="9876543210"',
   pattern: /^--phone="(.+)"$/,
   error: "Please enter a valid 10-digit phone number using --phone=\"9876543210\""
+  },
+  {
+    key: "phone",
+    prompt: 'Enter enrollment number: --phone="9832939492"',
+    pattern: /^--phone="([\w\d]+)"$/,
+    error: "Use format: --phone=\"9876543210\""
   }
 
 ];
