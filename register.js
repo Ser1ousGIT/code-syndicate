@@ -94,8 +94,8 @@ const fields = [
   },
   {
   key: "phone",
-  prompt: 'Enter your phone number: --phone="9876543210",
-  pattern: /^--phone="\\d{10}"$/,
+  prompt: 'Enter your phone number: --phone="9876543210"',
+  pattern: /^--phone="(.+)"$/,
   error: "Please enter a valid 10-digit phone number using --phone=\"9876543210\""
   }
 
