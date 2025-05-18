@@ -216,3 +216,9 @@ document.addEventListener("keydown", (e) => {
     skipTyping = true;
   }
 });
+
+document.addEventListener("touchstart", () => {
+  if (typingInProgress) {
+    skipTyping = true;
+  }
+});
