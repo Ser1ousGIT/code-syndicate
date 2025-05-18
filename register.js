@@ -21,33 +21,36 @@ const registrationData = {
   interests: "",
   skills: "",
   year: "",
-  semester: ""
+  semester: "",
+  email: "",
+  phone: ""
 };
 
 const fields = [
   {
     key: "name",
-    prompt: 'Enter your name like: --name="John Doe"',
+    prompt: 'Enter your name like:',
+    prompt: '--name="YOUR_NAME"'
     pattern: /^--name="(.+)"$/,
-    error: "Use format: --name=\"Your Full Name\""
+    error: "Use format: --name=\"Your Name\""
   },
   {
     key: "enrollment",
-    prompt: 'Enter enrollment number: --enroll="CS21B123"',
-    pattern: /^--enroll="([\w\d]+)"$/,
-    error: "Use format: --enroll=\"YourEnrollmentNumber\""
+    prompt: 'Enter enrollment number: --en="UU10101..."',
+    pattern: /^--en="([\w\d]+)"$/,
+    error: "Use format: --en=\"Your Enrollment Number\""
   },
   {
     key: "section",
-    prompt: 'Enter your section: --section="B"',
-    pattern: /^--section="(.+)"$/,
-    error: "Use format: --section=\"A/B/C...\""
+    prompt: 'Enter your section: --sec="A"',
+    pattern: /^--sec="(.+)"$/,
+    error: "Use format: --sec=\"A/B/C...\""
   },
   {
     key: "department",
     prompt: 'Enter department: --dept="CSE"',
     pattern: /^--dept="(.+)"$/,
-    error: "Use format: --dept=\"DepartmentName\""
+    error: "Use format: --dept=\"Department Name\""
   },
   {
     key: "course",
@@ -63,21 +66,21 @@ const fields = [
   },
   {
     key: "interests",
-    prompt: 'Enter interests: --interests="AI, Web, Robotics" (Max 200 chars)',
-    pattern: /^--interests="(.+)"$/,
-    error: "Use format: --interests=\"Your interests\"",
+    prompt: 'Enter interests: --intrst="AI, Web, Robotics" (Max 200 chars)',
+    pattern: /^--intrst="(.+)"$/,
+    error: "Use format: --intrst=\"Your interests\"",
     validator: (val) => val.length <= 200
   },
   {
     key: "skills",
-    prompt: 'Enter skill level: --skills="beginner" (new, beginner, seasoned, professional)',
-    pattern: /^--skills="(new|beginner|seasoned|professional)"$/,
+    prompt: 'Enter skill level: --skill="beginner" (new, beginner, seasoned, professional)',
+    pattern: /^--skill="(new|beginner|seasoned|professional)"$/,
     error: "Choose from: new, beginner, seasoned, professional"
   },
   {
     key: "year",
-    prompt: 'Enter year: --year="2"',
-    pattern: /^--year="([1-5])"$/,
+    prompt: 'Enter year: --yr="2"',
+    pattern: /^--yr="([1-5])"$/,
     error: "Year should be 1–5"
   },
   {
@@ -87,16 +90,10 @@ const fields = [
     error: "Semester should be 1–8"
   },
   {
-  key: "email",
-  prompt: 'Enter your email: --email="your@email.com"',
-  pattern: /^--email="[^"]+@[^"]+\.[^"]+"$/,
-  error: "Please enter a valid email address using --email=\"example@domain.com\""
-  },
-  {
-  key: "phone",
-  prompt: 'Enter your phone number: --phone="9876543210"',
-  pattern: /^--phone="(.+)"$/,
-  error: "Please enter a valid 10-digit phone number using --phone=\"9876543210\""
+    key: "email",
+    prompt: 'Enter your email: --email="your@email.com"',
+    pattern: /^--email="[^"]+@[^"]+\.[^"]+"$/,
+    error: "Please enter a valid email address using --email=\"example@domain.com\""
   },
   {
     key: "phone",
