@@ -11,7 +11,7 @@ export function showSkipNotice() {
   skipNotice.style.right = "20px";
   skipNotice.style.color = "lime";
   skipNotice.style.fontFamily = "monospace";
-  skipNotice.textContent = "[Press Enter to skip]";
+  skipNotice.textContent = "[Enter/Click to SKIP]";
   document.body.appendChild(skipNotice);
   return skipNotice;
 }
