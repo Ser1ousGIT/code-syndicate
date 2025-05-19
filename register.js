@@ -29,8 +29,7 @@ const registrationData = {
 const fields = [
   {
     key: "name",
-    prompt: 'Enter your name like:',
-    prompt: '--name="YOUR_NAME"',
+    prompt: 'Enter your name like: --name="YOUR_NAME"',
     pattern: /^--name="(.+)"$/,
     error: "Use format: --name=\"Your Name\""
   },
