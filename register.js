@@ -91,9 +91,10 @@ const fields = [
   {
     key: "email",
     prompt: 'Enter your email: --email="your@email.com"',
-    pattern: /^--email="[^@"]+@[^@"]+\.[a-z]{2,}"$/,
+    pattern: /^--email="([^@"]+@[^@"]+\.[a-z]{2,})"$/,
     error: 'Please enter a valid email using --email="example@domain.com"'
   },
+
   {
     key: "phone",
     prompt: 'Enter enrollment number: --phone="9832939492"',
