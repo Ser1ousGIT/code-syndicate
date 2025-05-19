@@ -198,7 +198,7 @@ function submitData() {
       if (value.toLowerCase() === "y") {
         print("Redirecting to About page...");
         setTimeout(() => {
-          window.location.href = "about.html";
+          window.location.href = "./about";
         }, 1500);
       } else {
         print("Good luck, Recruit.");
@@ -220,7 +220,6 @@ const introLines = [
   "",
   "Welcome to Code Syndicate Registration.",
   "Enter your details in the style of Linux CLI flags.",
-  "Example: --name=\"John Doe\"",
   ""
 ];
 
