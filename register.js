@@ -29,75 +29,89 @@ const registrationData = {
 const fields = [
   {
     key: "name",
-    prompt: 'Enter your name like: --name="YOUR_NAME"',
+    prompt: 'Enter your name like:',
+    prompt: '--name="YOUR_NAME"',
     pattern: /^--name="(.+)"$/,
     error: "Use format: --name=\"Your Name\""
   },
   {
     key: "enrollment",
-    prompt: 'Enter enrollment number: --en="UU10101..."',
+    prompt: 'Enter enrollment number:',
+    prompt: '--en="UU10101..."',
     pattern: /^--en="([\w\d]+)"$/,
     error: "Use format: --en=\"Your Enrollment Number\""
   },
   {
     key: "section",
-    prompt: 'Enter your section: --sec="A"',
+    prompt: 'Enter your section:',
+    prompt: '--sec="A"',
     pattern: /^--sec="(.+)"$/,
     error: "Use format: --sec=\"A/B/C...\""
   },
   {
     key: "department",
-    prompt: 'Enter department: --dept="CSE"',
+    prompt: 'Enter department:',
+    prompt: '--dept="CSE"',
     pattern: /^--dept="(.+)"$/,
     error: "Use format: --dept=\"Department Name\""
   },
   {
     key: "course",
-    prompt: 'Enter course: --course="B.Tech"',
+    prompt: 'Enter course:',
+    prompt: '--course="B.Tech"',
     pattern: /^--course="(.+)"$/,
     error: "Use format: --course=\"B.Tech/M.Tech/etc\""
   },
   {
     key: "specialization",
-    prompt: 'Enter specialization: --spec="AI & ML"',
+    prompt: 'Enter specialization:',
+    prompt: '--spec="AI & ML"',
     pattern: /^--spec="(.+)"$/,
     error: "Use format: --spec=\"Your Specialization\""
   },
   {
     key: "interests",
-    prompt: 'Enter interests: --intrst="AI, Web, Robotics" (Max 200 chars)',
+    prompt: 'Enter interests:',
+    prompt: '--intrst="AI, Web, Robotics"',
+    prompt: '(Max 200 chars)',
     pattern: /^--intrst="(.+)"$/,
     error: "Use format: --intrst=\"Your interests\"",
     validator: (val) => val.length <= 200
   },
   {
     key: "skills",
-    prompt: 'Enter skill level: --skill="beginner" (new, beginner, seasoned, professional)',
+    prompt: 'Enter skill level:',
+    prompt: '--skill="beginner"',
+    prompt: '(new, beginner, seasoned, professional)',
     pattern: /^--skill="(new|beginner|seasoned|professional)"$/,
     error: "Choose from: new, beginner, seasoned, professional"
   },
   {
     key: "year",
-    prompt: 'Enter year: --yr="2"',
+    prompt: 'Enter year:',
+    prompt: '--yr="2"',
     pattern: /^--yr="([1-5])"$/,
     error: "Year should be 1–5"
   },
   {
     key: "semester",
-    prompt: 'Enter semester: --sem="3"',
+    prompt: 'Enter semester:',
+    prompt: '--sem="3"',
     pattern: /^--sem="([1-8])"$/,
     error: "Semester should be 1–8"
   },
   {
     key: "email",
-    prompt: 'Enter your email: --email="your@email.com"',
+    prompt: 'Enter your email:',
+    prompt: '--email="your@email.com"',
     pattern: /^--email="([^@"]+@[^@"]+\.[a-z]{2,})"$/,
     error: 'Please enter a valid email using --email="example@domain.com"'
   },
 
   {
     key: "phone",
-    prompt: 'Enter enrollment number: --phone="9832939492"',
+    prompt: 'Enter enrollment number:',
+    prompt: '--phone="9832939492"',
     pattern: /^--phone="([\w\d]+)"$/,
     error: "Use format: --phone=\"9876543210\""
   }
@@ -192,7 +206,7 @@ function submitData() {
     print("We'll officialize your membership.");
     print("Welcome to the Club.");
     print("");
-    print("Would you like to visit the About page? (y/n)");
+    print("Would you like to visit the About page again? (y/n)");
 
     createInputLine((value) => {
       if (value.toLowerCase() === "y") {
@@ -219,6 +233,7 @@ const introLines = [
   "Ready.",
   "",
   "Welcome to Code Syndicate Registration.",
+  "Take this oppurtunity to learn how to work around in Linux.",
   "Enter your details in the style of Linux CLI flags.",
   ""
 ];
