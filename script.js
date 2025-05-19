@@ -108,7 +108,7 @@ function handleInput(value) {
     scrollToBottom(terminal);
 
     showSpinnerLine("loading ", 3000, () => {
-      window.location.href = "about.html";
+      window.location.href = "./about";
     });
   } else if (value === "n") {
     appendLine("");
