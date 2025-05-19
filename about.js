@@ -143,7 +143,7 @@ function handleRegisterAnswer(value) {
 
     setTimeout(() => {
       clearInterval(interval);
-      window.location.href = "register.html";
+      window.location.href = "./register";
     }, 3000);
   } else if (value === "n") {
     createAndAppend("Learn a command line before you leave:");
