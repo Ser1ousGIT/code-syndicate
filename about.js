@@ -15,8 +15,8 @@ const aboutLines = [
   "Accessing About Section...",
   "Fetching data...",
   "Connection successful...",
-  "Welcome to Code Syndicate!",
-  "",
+  "Welcome to Code Syndicate!", 
+  "[[IMAGE]]",
   "We are a passionate community of tech enthusiasts.",
   "Our mission is to grow together by sharing knowledge.",
   "We are learners just like you, a little more experienced.",
@@ -59,7 +59,7 @@ function createAndAppend(content, isHTML = false) {
   div.style.color = "lime";
 
   if (isHTML) {
-    div.innerHTML = content; // this is safe because it's only used on pre-set command + desc
+    div.innerHTML = content;
   } else {
     div.textContent = content;
   }
@@ -68,6 +68,19 @@ function createAndAppend(content, isHTML = false) {
   scrollToBottom(terminal);
 }
 
+function insertImage() {
+  const img = document.createElement("img");
+  img.src = "logo.png";
+  img.alt = "Code Syndicate Banner";
+  img.style.maxWidth = "90%";
+  img.style.width = "100%";
+  img.style.height = "auto";
+  img.style.margin = "20px auto";
+  img.style.borderRadius = "8px";
+  img.style.display = "block";
+  terminal.appendChild(img);
+  scrollToBottom(terminal);
+}
 
 function typeLine() {
   if (lineIndex >= aboutLines.length) {
@@ -78,6 +91,13 @@ function typeLine() {
   }
 
   currentLine = aboutLines[lineIndex];
+
+  if (currentLine === "[[IMAGE]]") {
+    insertImage();
+    lineIndex++;
+    setTimeout(typeLine, 200);
+    return;
+  }
 
   if (skipTyping) {
     appendAndScroll(currentLine + "<br>");
